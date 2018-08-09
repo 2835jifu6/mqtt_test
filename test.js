@@ -14,7 +14,7 @@ var Buffer = require('buffer').Buffer;
 	});
 	
 	client.on('message', function(topic, msg){
-		json = JSON.parse(msg);
+		json = JSON.parse(msg);  //資料轉成JSON
 		data = new Buffer(json.data, 'base64').toString();   //將Base64解碼
 	});
 	
